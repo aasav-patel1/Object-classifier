@@ -30,7 +30,7 @@ try:
     model = load_model("keras_model.h5", custom_objects={
         'DepthwiseConv2D': custom_depthwise_conv2d,
         'Conv2D': Conv2D
-    })
+    }, compile=False)
     st.write("Model loaded successfully!")
 except Exception as e:
     st.write(f"Error loading model: {e}")
